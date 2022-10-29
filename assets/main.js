@@ -65,5 +65,4 @@ const encrypt = () => {
             }
         })
         .join('');
-    console.log(codedArray);
 };
