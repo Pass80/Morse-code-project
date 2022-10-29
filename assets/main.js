@@ -42,9 +42,8 @@ let morseAlphabet = [
     { letter: 'Z', morseCode: '--..' },
 ];
 
-let codedArray = [];
-
 const encrypt = () => {
+    let codedArray;
     let enteredWordsArray = inputText.value.toUpperCase().split('');
     codedArray = enteredWordsArray.map((element) => {
         return morseAlphabet.find((ele) => ele.letter === element);

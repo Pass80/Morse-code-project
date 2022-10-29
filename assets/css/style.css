@@ -95,6 +95,10 @@ button:active {
     padding-left: 4rem;
     letter-spacing: 0.5rem;
 }
+
+#result p {
+    display: inline-block;
+}
 #explanation {
     display: flex;
     flex-direction: column;
