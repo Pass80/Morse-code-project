@@ -47,22 +47,23 @@ let codedArray = [];
 const encrypt = () => {
     let enteredWordsArray = inputText.value.toUpperCase().split('');
     codedArray = enteredWordsArray.map((element) => {
-        return morseAlphabet.filter((ele) => ele.letter === element);
+        return morseAlphabet.find((ele) => ele.letter === element);
     });
     result.innerHTML = codedArray
         .map((element) => {
-            return element[0].morseCode;
+            return element.morseCode;
         })
         .join('');
     codeExplanation.innerHTML = codedArray
         .map((element) => {
-            if (element[0].letter === ' ') {
+            if (element.letter === ' ') {
                 return '<br />';
             } else {
                 return ` <p>${
-                    element[0].letter + '  =  ' + element[0].morseCode
+                    element.letter + '  =  ' + element.morseCode
                 }</p>`;
             }
         })
         .join('');
+    console.log(codedArray);
 };
